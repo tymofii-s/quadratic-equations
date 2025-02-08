@@ -1,0 +1,16 @@
+function showSolutionD() {
+    let disk = document.getElementById("Disk")
+    let solution = [
+        // p
+        `D = ${b} * ${b} - 4 * ${a} * ${c} = ${D}`,
+        // span --- ${-b} + Math.sqrt(D) / (2 * a)
+        `x₁ = <span class="fraction">${-b} + ${Math.sqrt(D)}/${(2 * a)}</span>`,
+        // span --- ${-b} - Math.sqrt(D) / (2 * a)
+        `x₂ = <span class="fraction">${-b} - ${Math.sqrt(D)}/${(2 * a)}</span>`,
+    ]
+    
+    for (let i = 0; i < solution.length; i++) {
+        let p = document.createElement("p").textContent = solution[i]
+        disk.appendChild(p)
+    }
+}
